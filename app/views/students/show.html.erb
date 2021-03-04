@@ -1,0 +1,24 @@
+<h2>Detail Siswa </h2>
+<div class="card my-3" style="max-width:540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img class="img-fluid" src="/default.jpg" alt="foto">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= @student.first_name %> <%= @student.last_name %></h5>
+        <p class="card-text"><strong>Email:</strong>
+          <%= @student.email %></p>
+        <p class="card-text"> <strong>Phone:</strong>
+          <%= @student.phone %>
+        </p>
+
+        <p class="card-text"><small class="text-muted"> Twitter: <%= @student.twitter %>
+          </small></p>
+        <%= link_to 'Edit', edit_student_path(@student),class:"btn btn-secondary" %>
+        <%= link_to 'Back', students_path,class:"btn btn-dark" %>
+      </div>
+    </div>
+
+  </div>
+</div>
